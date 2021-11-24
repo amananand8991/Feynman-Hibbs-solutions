@@ -1,0 +1,86 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{bm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{breqn}
+\usepackage{float}
+\usepackage{wrapfig}
+\graphicspath{ {images/} }
+\begin{document}
+
+\section {{\large{\textbf{The Fundamental Concepts of Quantum Mechanics}}}}
+\section {{\large{\textbf{The Quantum Mechanical law of motion}}}}
+
+\subsection {}%2.1
+Given $L = (m/2)\dot{x}^2$, from Euler-Lagrange(E.L.) equation 
+$$\frac{d}{dt}\bigg(\frac{\partial L}{\partial \dot{x}}\bigg) - \frac{\partial L}{\partial x} =0$$
+$\implies m\ddot{x} = 0 \implies \dot{x} = constant = v$. Now since $S_{cl}=\int_{t_a}^{t_b} L \cdot dt $ \\$\implies S_{cl}= (m/2)v^2 (t_b -t_a)$, we can get v from the initial conditions as follows:
+$x(t) = vt + c$, also $x(t_a)=x_a $ and $ x(t_b)=x_b$.\\
+$$\implies v = \frac{x_a - x_b}{t_a - t_b} \mathrm{,so }\*\ S_{cl} = \frac{m}{2}\frac{(x_a-x_b)^2}{t_a-t_b}$$
+
+\subsection {}%2.2
+Given $L = (m/2)(\dot{x}^2 -\omega^2 x^2)$, from Euler-Lagrange(E.L.) equation \\
+$\implies \ddot{x} = -\omega^2 x \implies x(t)= A \mathrm{sin}(\omega(t-t_a)) + B\mathrm{sin}(\omega(t_b-t) ) $\\
+$\implies x_a = B\mathrm{sin}(\omega(t_b-t_a))$ and $x_b = A \mathrm{sin}(\omega(t_b-t_a))$\\
+Since, $S_{cl}=\int_{a}^{b} L \cdot dt =(m/2) \int_{a}^{b}(\dot{x}^2 -\omega^2 x^2)\cdot dt$, doing IBP\\
+$=(m/2) \Big[ \dot{x}x|_a^b -\int_{a}^{b}\ddot{x}x \cdot dt -\int_{a}^{b}\omega^2 x^2 \cdot dt \Big]$\\
+$=(m/2)\Big[\dot{x}(t_b)x_b - \dot{x}(t_a)x_a\Big]$\\
+$=(m/2)\Big[(A\omega \mathrm{cos}(\omega T)-B\omega)x_b -(A\omega-B\omega\mathrm{cos}(\omega T))x_a \Big]$\\
+$=\frac{m\omega}{2\mathrm{sin}(\omega T)}\Big[(x_a^2 +x_b^2)\mathrm{cos}(\omega T) -2x_ax_b \Big]$
+
+\subsection {}%2.3
+Given $L = (m/2)\dot{x}^2 + fx$, from Euler-Lagrange(E.L.) equation \\
+$\implies m\ddot{x}=f \implies x(t)=(f/2m)(t-t_a)(t-t_b)+x_a \frac{(t-t_b)}{(t_a-t_b)}+x_b \frac{(t-t_a)}{(t_b-t_a)}$\\
+Since, $S_{cl}=\int_{a}^{b} L \cdot dt =(m/2) \int_{a}^{b}(\dot{x}^2 +(2f/m)x)\cdot dt$, doing IBP\\
+$=(m/2) \Big[ \dot{x}x|_a^b -\int_{a}^{b}\ddot{x}x \cdot dt +\int_{a}^{b}(2f/m)x \cdot dt \Big]$\\
+$=(m/2) \Big[ \dot{x}x|_a^b  +\int_{a}^{b}(f/m)x \cdot dt \Big]$\\
+$=(m/2)\Big[\dot{x}(t_b)x_b - \dot{x}(t_a)x_a+\int_{a}^{b}(f/m)x \cdot dt\Big]$\\
+Putting all the values and doing all the simplification yields,\\
+$$ S_{cl} =\frac{m(x_b-x_a)^2}{2T}+\frac{fT(x_b+x_a)}{2}-\frac{f^2T^3}{24m}.$$
+
+\subsection {}%2.4
+From equation (2.6) we know that
+$$\delta S = \bigg[\delta x\frac{\partial L}{\partial \dot{x}}\bigg]_{t_a}^{t_b}-\int_{t_a}^{t_b}\delta x \bigg[\frac{d}{dt}\bigg(\frac{\partial L}{\partial \dot{x}}\bigg) - \frac{\partial L}{\partial x}  \bigg]\cdot dt$$
+ The E.L. equation simplifies this to\\
+ $$\delta S = \bigg[\delta x\frac{\partial L}{\partial \dot{x}}\bigg]_{t_a}^{t_b} = \delta x_b\bigg(\frac{\partial L}{\partial \dot{x}}\bigg)_{x=x_b}- \delta x_a\bigg(\frac{\partial L}{\partial \dot{x}}\bigg)_{x=x_a}$$
+This gives us the variation at end points as\\
+$$\bigg(\frac{\partial L}{\partial \dot{x}}\bigg)_{x=x_b} =+\frac{\partial S_{cl}}{\partial x_b}\quad \mathrm{and,}\quad
+\bigg(\frac{\partial L}{\partial \dot{x}}\bigg)_{x=x_a} =-\frac{\partial S_{cl}}{\partial x_a}.$$
+
+\subsection {}%2.5
+Since, $\delta S_{cl}=\int_{t_a+\delta t_a}^{t_b+\delta t_b} L(\alpha) \cdot dt - \int_{t_a}^{t_b} L(0) \cdot dt$ for a p
+$$\implies \delta S_{cl}= L(t_b)\delta t_b -L(t_a)\delta t_a +\int_{t_a}^{t_b} \delta L \cdot dt$$%\delta x_b\bigg(\frac{\partial L}{\partial \dot{x}}\bigg)_{x=x_b}- \delta x_a\bigg(\frac{\partial L}{\partial \dot{x}}\bigg)_{x=x_a}
+
+\subsection {}%2.6
+checkerboard problem
+
+
+
+\section {{\large{\textbf{Developing the concepts with special example}}}}
+
+\subsection {}%3.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
